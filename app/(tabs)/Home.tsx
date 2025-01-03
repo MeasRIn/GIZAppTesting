@@ -131,7 +131,7 @@ export class Home extends Component {
               }}
             >
             
-              <TouchableOpacity>
+              <TouchableOpacity onPress={()=> router.push('../(register)/NewCustomer')}>
                 <View style={{borderRadius: 16,width: 170,height: 100,backgroundColor: '#FED6EC',}}>
 
                   <View style={{flex: 1,justifyContent: 'center',alignItems: 'center',}}>
@@ -153,7 +153,7 @@ export class Home extends Component {
               </TouchableOpacity>
 
               {/* old customer card */}
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=> router.push('../(register)/OldCustomer')}>
 
                 <View style={{borderRadius: 16,width: 170,height: 100,backgroundColor: '#E5E4F1',}}>
                   <View style={{flex: 1,justifyContent: 'center',alignItems: 'center',}}>

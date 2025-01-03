@@ -68,7 +68,11 @@ const  _layout = () =>{
            
           }} />
         <Stack.Screen name='(tabs)' options={{headerShown:false}}/>
+        <Stack.Screen name='(register)/NewCustomer' options={{headerShown:false}}/>
+        <Stack.Screen name='(register)/OldCustomer' options={{headerShown:false}}/>
+
       </Stack>
+
     )
   
 }
