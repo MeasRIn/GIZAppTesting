@@ -10,7 +10,10 @@ const  _layout = () =>{
   const [loaded] = useFonts({
     'Khmer-Regular': require('../assets/fonts/Khmer-Regular.ttf'),
     'Khmer-Moul':require('../assets/fonts/Moul-Regular.ttf'),
-    'NatoSansKhmer':require('../assets/fonts/NotoSansKhmer-Black.ttf'),
+    'BattambangRegular':require('../assets/fonts/Battambang-Regular.ttf'),
+    'BattambangBold':require('../assets/fonts/Battambang-Bold.ttf'),
+    'BattambangExtraBold':require('../assets/fonts/Battambang-Black.ttf'),
+
 
   });
 
@@ -68,8 +71,13 @@ const  _layout = () =>{
            
           }} />
         <Stack.Screen name='(tabs)' options={{headerShown:false}}/>
-        <Stack.Screen name='(register)/NewCustomer' options={{headerShown:false}}/>
-        <Stack.Screen name='(register)/OldCustomer' options={{headerShown:false}}/>
+        <Stack.Screen name='(NewRegister)/NewCustomer' options={{headerShown:false}}/>
+        <Stack.Screen name='(NewRegister)/VerifyScreen' options={{headerShown:false}}/>
+        <Stack.Screen name='(NewRegister)/OldCustomer' options={{headerShown:false}}/>
+        <Stack.Screen name='(NewRegister)/HistoryView' options={{headerShown:false}}/>
+        <Stack.Screen name='(NewRegister)/Consulting' options={{headerShown:false}}/>
+
+
 
       </Stack>
 

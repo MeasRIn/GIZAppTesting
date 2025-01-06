@@ -5,7 +5,6 @@ import { config } from '@gluestack-ui/config'
 import { Link, SplashScreen, Stack } from 'expo-router'
 import { useFonts } from 'expo-font';
 
-import * as Font from 'expo-font';
 import LoginForm from '@/components/input/loginForm'
 export class login extends Component {
  

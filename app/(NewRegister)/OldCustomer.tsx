@@ -24,7 +24,7 @@ export class OldCustomer extends Component {
               <TouchableOpacity onPress={()=>router.back()}>
                 <Ionicons name="chevron-back-outline" size={30} color="white" />
               </TouchableOpacity>
-              <Text style={{fontSize:20,color:'white'}}>ចុះឈ្មោះអតិថិជនចាស់</Text>
+              <Text style={{fontSize:20,color:'white',fontFamily:'BattambangBold'}}>ចុះឈ្មោះអតិថិជនចាស់</Text>
             </View>
           </View>
           <View
@@ -54,12 +54,12 @@ export class OldCustomer extends Component {
               {/*  */}
 
              
-            <View style={{backgroundColor:'#CD85B0',borderRadius:50,marginTop:10,height:50,width:50,position:'absolute',top:height*.65,right:30}}>
-              <View style={{flex:1,alignItems:'center',justifyContent:'center',marginLeft:5}}>
-
-                <FontAwesome6 name="user-plus" size={24} color="white"  />
-              </View>
-            </View>
+            <TouchableOpacity style={{backgroundColor:'#CD85B0',borderRadius:50,marginTop:10,height:50,width:50,position:'absolute',top:height*.65,right:30}}>
+                <View style={{flex:1,alignItems:'center',justifyContent:'center',marginLeft:5}}>
+                  <FontAwesome6 name="user-plus" size={24} color="white"  />
+                </View>
+          
+            </TouchableOpacity> 
 
             </View>
 

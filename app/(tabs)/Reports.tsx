@@ -75,8 +75,8 @@ export class Reports extends Component {
                     data={data}
                     renderItem={({ item }) => (
                       <Box
-                        borderBottomWidth="$1"
-                        borderColor="$trueGray600"
+                        borderBottomWidth="$2"
+                        borderColor="#A7B7B9"
                         py="$3"
                       >
                         <HStack space="md" justifyContent="space-between">

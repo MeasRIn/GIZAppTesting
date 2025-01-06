@@ -72,8 +72,8 @@ export class Home extends Component {
                         height: '100%',
                       }}/>
                 </Avatar>
-                <Text style={{ marginLeft: 10, fontFamily: 'NatoSansKhmer', fontSize: 16 }}>
-                  សួស្តី, <Text style={{ fontFamily: 'Khmer-regular' }}>សៀវ​​ ពាន</Text>
+                <Text style={{ marginLeft: 10, fontFamily: 'BattambangExtraBold', fontSize: 16 }}>
+                  សួស្តី, <Text style={{ fontFamily: 'BattambangReglar' }}>សៀវ​​</Text>
                 </Text>
               </View>
               {/* Notification icon */}
@@ -90,20 +90,20 @@ export class Home extends Component {
                 >
                   <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                     {/* Text Section */}
-                    <View style={{ paddingHorizontal: 20 }}>
-                      <Text style={{ fontSize: 12, fontWeight: 'bold', fontFamily: 'Khmer-Regular', color: '#56367D', marginBottom: 3 }}>
+                    <View style={{ paddingHorizontal: 20,marginTop:15 }}>
+                      <Text style={{ fontSize: 12, fontWeight: 'bold', fontFamily: 'BattambangRegular', color: '#56367D'}}>
                         ចាប់ផ្ដើម
                       </Text>
-                      <Text style={{ fontSize: 20, fontFamily: 'NatoSansKhmer', marginBottom: 5, color: '#56367D' }}>
+                      <Text style={{ fontSize: 20, fontFamily: 'BattambangBold', color: '#56367D' }}>
                         ពិនិត្យ និងប្រឹក្សា
                       </Text>
-                      <Text style={{ fontSize: 12, color: '#56367D', marginBottom: 12 }}>
+                      <Text style={{ fontSize: 12, color: '#56367D', marginBottom: 6 ,fontFamily:'BattambangRegular'}}>
                         ជាមួយពួកយើងថ្ងៃនេះ
                       </Text>
                       {/* Click button */}
                       <TouchableOpacity style={{ borderRadius: 20, overflow: 'hidden', width: 80, marginBottom: 12 }}>
                         <LinearGradient colors={['#FED6EC', '#CD85B0']}>
-                          <Text style={{ alignSelf: 'center', padding: 10, fontSize: 10, color: '#FFFFFF', fontFamily: 'NatoSansKhmer' }}>
+                          <Text style={{ alignSelf: 'center', padding: 8, fontSize: 10, color: '#FFFFFF', fontFamily: 'BattambangRegular' }}>
                             ចុចទីនេះ
                           </Text>
                         </LinearGradient>
@@ -131,7 +131,7 @@ export class Home extends Component {
               }}
             >
             
-              <TouchableOpacity onPress={()=> router.push('../(register)/NewCustomer')}>
+              <TouchableOpacity onPress={()=> router.push('../(NewRegister)/NewCustomer')}>
                 <View style={{borderRadius: 16,width: 170,height: 100,backgroundColor: '#FED6EC',}}>
 
                   <View style={{flex: 1,justifyContent: 'center',alignItems: 'center',}}>
@@ -145,7 +145,7 @@ export class Home extends Component {
                       }}/>
                     </Avatar>
                 
-                    <Text style={{fontFamily: 'NatoSansKhmer',color: '#CD85B0',fontSize:14}}>
+                    <Text style={{fontFamily: 'BattambangBold',color: '#CD85B0',fontSize:14}}>
                       អតិថិជនថ្មី
                     </Text>
                   </View>
@@ -153,7 +153,7 @@ export class Home extends Component {
               </TouchableOpacity>
 
               {/* old customer card */}
-                <TouchableOpacity onPress={()=> router.push('../(register)/OldCustomer')}>
+                <TouchableOpacity onPress={()=> router.push('../(NewRegister)/OldCustomer')}>
 
                 <View style={{borderRadius: 16,width: 170,height: 100,backgroundColor: '#E5E4F1',}}>
                   <View style={{flex: 1,justifyContent: 'center',alignItems: 'center',}}>
@@ -167,7 +167,7 @@ export class Home extends Component {
                       }}/>
                     </Avatar>
                 
-                    <Text style={{fontFamily: 'NatoSansKhmer',color: '#5F3C8D',fontSize:14}}>
+                    <Text style={{fontFamily: 'BattambangBold',color: '#5F3C8D',fontSize:14}}>
                       អតិថិជនចាស់
                     </Text>
                   </View>
@@ -176,7 +176,7 @@ export class Home extends Component {
               </View>
             {/* knowlegde and information section */}
             <Center bg="#E5E4F1" h={60} w={350} style={{alignSelf:'center',marginTop:20,borderRadius:16}}>
-              <View style={{flexDirection:'row'}}>
+              <View style={{flexDirection:'row',gap:10}}>
                 <Image  source={require('@/assets/images/bookImage.png')}
                    resizeMode="contain" 
                    style={{
@@ -184,7 +184,7 @@ export class Home extends Component {
                       height:35
                     }}
                 />
-                <Text style={{alignSelf:'center',color:'#5F3C8D',fontFamily:'Khmer-Regular',marginLeft:20}}>
+                <Text style={{alignSelf:'center',color:'#5F3C8D',fontFamily:'BattambangExtraBold',fontSize:16}}>
                   ផ្ទាំងសន្លឹកផ្ទាត់អប់រំនិងផ្ដល់ប្រឹក្សា 
                 </Text>
               </View>
@@ -193,10 +193,10 @@ export class Home extends Component {
             {/* knowlegde content section */}
 
             <View style={{flex:1,justifyContent:'space-between',flexDirection:'row',paddingHorizontal:20,paddingVertical:10}}>
-              <Heading style={{fontFamily:'NatoSansKhmer',fontSize:16,color:'#3F484B'}}>ចំណេះដឹង</Heading>
+              <Heading style={{fontFamily:'BattambangBold',fontSize:16,color:'#3F484B'}}>ចំណេះដឹង</Heading>
               <TouchableOpacity style={{alignSelf:'center'}}>
                 
-                <Text style={{color:'#5F3C8D'}}>មើលទាំងអស់</Text>
+                <Text style={{color:'#5F3C8D',fontFamily:'BattambangRegular'}}>មើលទាំងអស់</Text>
               </TouchableOpacity>
             </View>
             <View>
@@ -277,9 +277,9 @@ export class Home extends Component {
             {/* information */}
 
             <View style={{flex:1,justifyContent:'space-between',flexDirection:'row',paddingHorizontal:20,paddingVertical:10}}>
-              <Heading style={{fontFamily:'NatoSansKhmer',fontSize:16,color:'#3F484B'}}>ព័ត៌មាន និងព្រឹត្តិការណ៍</Heading>
+              <Heading style={{fontFamily:'BattambangBold',fontSize:16,color:'#3F484B'}}>ព័ត៌មាន និងព្រឹត្តិការណ៍</Heading>
               <TouchableOpacity style={{alignSelf:'center'}}> 
-                <Text style={{color:'#5F3C8D'}}>មើលទាំងអស់</Text>
+                <Text style={{color:'#5F3C8D',fontFamily:'BattambangRegular'}}>មើលទាំងអស់</Text>
               </TouchableOpacity>
             </View>
             <ScrollView
@@ -288,7 +288,7 @@ export class Home extends Component {
               showsHorizontalScrollIndicator={false}
             >
               {knowledge.map((item, index) => (
-                <TouchableOpacity onPress={()=> router.push('/(auth)/register')}>
+                <TouchableOpacity key={index} onPress={(item)=> router.push('/(auth)/register')}>
 
                   <View
                     key={index}

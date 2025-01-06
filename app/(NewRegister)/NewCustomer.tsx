@@ -1,14 +1,12 @@
-import { Dimensions, Text, Touchable, TouchableOpacity, View } from 'react-native'
-import React, { Component, useState } from 'react'
+import { Dimensions, Text, TouchableOpacity, View } from 'react-native'
+import React from 'react'
 import { ScrollView, CircleIcon, GluestackUIProvider,Input,Button, InputField, Radio, RadioGroup, RadioIcon, RadioIndicator, RadioLabel, Select, SelectBackdrop, SelectContent, SelectDragIndicator, SelectDragIndicatorWrapper, SelectInput, SelectItem, SelectPortal, SelectTrigger, Textarea, TextareaInput, AddIcon, ButtonIcon, ButtonText } from '@gluestack-ui/themed'
 import { config } from '@gluestack-ui/config'
 import { Fontisto, Ionicons, MaterialIcons } from '@expo/vector-icons'
 import { router } from 'expo-router'
-import DatePicker from '@react-native-community/datetimepicker'
 export function NewCustomer() {
-  var {width, height} = Dimensions.get('window');
- 
- 
+  var {height} = Dimensions.get('window');
+
     return (
 
       <GluestackUIProvider config={config} >
@@ -26,7 +24,7 @@ export function NewCustomer() {
               <TouchableOpacity onPress={()=>router.back()}>
                 <Ionicons name="chevron-back-outline" size={30} color="white" />
               </TouchableOpacity>
-              <Text style={{fontSize:20,color:'white'}}>ចុះឈ្មោះអតិថិជនថ្មី</Text>
+              <Text style={{fontSize:20,color:'white',fontFamily:'BattambangBold'}}>ចុះឈ្មោះអតិថិជនថ្មី</Text>
             </View>
           </View>
 
@@ -45,45 +43,45 @@ export function NewCustomer() {
                 {/* input name */}
                 <View style={{paddingHorizontal:20,marginTop:20,gap:20}}>
                   <View>
-                    <Text>ឈ្មោះម្ដាយ ឬអាណាព្យាបាល</Text>
+                    <Text style={{fontFamily:'BattambangRegular'}}>ឈ្មោះម្ដាយ ឬអាណាព្យាបាល</Text>
                     <Input variant="outline" size="md" isDisabled={false} isInvalid={false} isReadOnly={false} marginTop={6} >
                       <InputField
-                          placeholder='ចញ្ចូលឈ្មោះម្ដាយ ឬអាណាព្យាបាល' style={{fontSize:14}}
+                          placeholder='ចញ្ចូលឈ្មោះម្ដាយ ឬអាណាព្យាបាល' style={{fontSize:14,fontFamily:'BattambangRegular'}}
                       />
                     </Input>
 
                   </View>
                   {/* age input */}
                   <View>
-                    <Text>អាយុម្ដាយ ឬអាណាព្យាបាល</Text>
+                    <Text style={{fontFamily:'BattambangRegular'}}>អាយុម្ដាយ ឬអាណាព្យាបាល</Text>
                     <Input variant="outline" size="md" isDisabled={false} isInvalid={false} isReadOnly={false} marginTop={6}>
                       <InputField
-                          placeholder='បញ្ចូលអាយុម្ដាយ ឬអាណាព្យាបាល' style={{fontSize:14}}
+                          placeholder='បញ្ចូលអាយុម្ដាយ ឬអាណាព្យាបាល' style={{fontSize:14,fontFamily:'BattambangRegular'}}
                       />
                     </Input>
 
                   </View>
                   {/* phone number input */}
                   <View>
-                    <Text>លេខទូរស័ព្ទ *</Text>
+                    <Text style={{fontFamily:'BattambangRegular'}}>លេខទូរស័ព្ទ *</Text>
                     <Input variant="outline" size="md" isDisabled={false} isInvalid={false} isReadOnly={false} marginTop={6}>
                       <InputField
-                          placeholder='បញ្ចូលលេខទូរស័ព្ទរបស់អ្នក *' style={{fontSize:14}}
+                          placeholder='បញ្ចូលលេខទូរស័ព្ទរបស់អ្នក *' style={{fontSize:14,fontFamily:'BattambangRegular'}}
                       />
                     </Input>
 
                   </View>
                   {/* gender input */}
                   <View>
-                    <Text>ភេទ *</Text>
-                    <View style={{flexDirection:'row',justifyContent:'space-between',borderColor:'#D3D3D3',borderWidth:1,paddingHorizontal:10,paddingVertical:5,borderRadius:5,marginTop:6}}>
+                    <Text style={{fontFamily:'BattambangRegular'}}>ភេទ *</Text>
+                    <View style={{flexDirection:'row',justifyContent:'space-between',paddingHorizontal:10,paddingVertical:5,borderRadius:5,marginTop:6}}>
 
                       <RadioGroup>
                         <Radio value="change" size="md" isInvalid={false} isDisabled={false}>
                           <RadioIndicator mr='$2'>
                             <RadioIcon as={CircleIcon}/>
                           </RadioIndicator>
-                          <RadioLabel style={{fontSize:14}}>ស្រី</RadioLabel>
+                          <RadioLabel style={{fontSize:14,fontFamily:'BattambangRegular'}}>ស្រី</RadioLabel>
                         </Radio>
                       </RadioGroup>
                       <Text style={{fontSize:20,color:'#3F484B'}}>/</Text>
@@ -92,7 +90,7 @@ export function NewCustomer() {
                           <RadioIndicator mr='$2'>
                             <RadioIcon as={CircleIcon}/>
                           </RadioIndicator>
-                          <RadioLabel style={{fontSize:14}}>ប្រុស</RadioLabel>
+                          <RadioLabel style={{fontSize:14,fontFamily:'BattambangRegular'}}>ប្រុស</RadioLabel>
                         </Radio>
                       </RadioGroup>
                     </View>
@@ -100,11 +98,11 @@ export function NewCustomer() {
 
                   {/* job info input */}
                   <View>
-                    <Text>មុខរបរម្ដាយ ឬអាណាព្យាបាល</Text>
+                    <Text style={{fontFamily:'BattambangRegular'}}>មុខរបរម្ដាយ ឬអាណាព្យាបាល</Text>
                     <View style={{marginTop:6}}>
                       <Select >
                         <SelectTrigger variant="outline" size="md" >
-                          <SelectInput placeholder="ជ្រើសរើសមុខរបរម្ដាយ ឬអាណាព្យាបាល"  style={{fontSize:14 }}/>
+                          <SelectInput placeholder="ជ្រើសរើសមុខរបរម្ដាយ ឬអាណាព្យាបាល"  style={{fontSize:14 ,fontFamily:'BattambangRegular'}}/>
                           <MaterialIcons name="keyboard-arrow-down" size={26} color="#828282" style={{marginRight:5}} />
                         </SelectTrigger>
                         <SelectPortal>
@@ -132,20 +130,43 @@ export function NewCustomer() {
                       </Select>
                     </View>
                   </View>
+                  {/* location */}
+                  <View>
+                    <Text style={{fontFamily:'BattambangRegular'}}>ទីតាំង *</Text>
+                    <View style={{flexDirection:'row',justifyContent:'space-between',paddingHorizontal:10,paddingVertical:5,borderRadius:5,marginTop:6}}>
+
+                      <RadioGroup>
+                        <Radio value="change" size="md" isInvalid={false} isDisabled={false}>
+                          <RadioIndicator mr='$2'>
+                            <RadioIcon as={CircleIcon}/>
+                          </RadioIndicator>
+                          <RadioLabel style={{fontSize:14,fontFamily:'BattambangRegular'}}>ក្នុងតំបន់សេវា</RadioLabel>
+                        </Radio>
+                      </RadioGroup>
+                      <RadioGroup>
+                        <Radio value="change" size="md" isInvalid={false} isDisabled={false} >
+                          <RadioIndicator mr='$2'>
+                            <RadioIcon as={CircleIcon}/>
+                          </RadioIndicator>
+                          <RadioLabel style={{fontSize:14,fontFamily:'BattambangRegular'}}>ក្រៅតំបន់សេវា</RadioLabel>
+                        </Radio>
+                      </RadioGroup>
+                    </View>
+                  </View>
                   {/* address input */}
                   <View>
-                    <Text>អាសយដ្ឋានម្ដាយ ឬអាណាព្យាបាល</Text>
+                    <Text style={{fontFamily:'BattambangRegular'}}>អាសយដ្ឋានម្ដាយ ឬអាណាព្យាបាល</Text>
                     <Textarea style={{height:100,marginTop:6}}>
                       <TextareaInput />
                     </Textarea>
                   </View>
                   {/* choosing village */}
                   <View>
-                    <Text>ជ្រើសរើសភូមិ</Text>
+                    <Text style={{fontFamily:'BattambangRegular'}}>ជ្រើសរើសភូមិ</Text>
                     <View style={{marginTop:6}}>
                       <Select>
                         <SelectTrigger variant="outline" size="md" >
-                          <SelectInput placeholder="ជ្រើសរើសភូមិ"  style={{fontSize:14}}/>
+                          <SelectInput placeholder="ជ្រើសរើសភូមិ"  style={{fontSize:14,fontFamily:'BattambangRegular'}}/>
                           <MaterialIcons name="keyboard-arrow-down" size={26} color="#828282" style={{marginRight:5}} />
                         </SelectTrigger>
                         <SelectPortal>
@@ -163,7 +184,6 @@ export function NewCustomer() {
                             <SelectItem
                               label="ភូមិអន្ទិល "
                               value="ui"
-                              isDisabled={true}
                             />
                             <SelectItem
                               label="ភូមិគោលបំណង"
@@ -176,15 +196,15 @@ export function NewCustomer() {
                   </View>
                   {/* child status */}
                   <View>
-                    <Text>ស្ថានភាពកូន *</Text>
-                    <View style={{flexDirection:'row',justifyContent:'space-between',borderColor:'#D3D3D3',borderWidth:1,paddingHorizontal:10,paddingVertical:6,borderRadius:5,marginTop:6}}>
+                    <Text style={{fontFamily:'BattambangRegular'}}>ស្ថានភាពកូន *</Text>
+                    <View style={{flexDirection:'row',justifyContent:'space-between',paddingHorizontal:10,paddingVertical:6,borderRadius:5,marginTop:6}}>
 
                       <RadioGroup>
                         <Radio value="change" size="md" isInvalid={false} isDisabled={false} >
                           <RadioIndicator mr='$2'>
                             <RadioIcon as={CircleIcon}/>
                           </RadioIndicator>
-                          <RadioLabel style={{fontSize:14}}>កូននៅក្នុងផ្ទៃ</RadioLabel>
+                          <RadioLabel style={{fontSize:14,fontFamily:'BattambangRegular'}}>កូននៅក្នុងផ្ទៃ</RadioLabel>
                         </Radio>
                       </RadioGroup>
                       <RadioGroup>
@@ -192,7 +212,7 @@ export function NewCustomer() {
                           <RadioIndicator mr='$2'>
                             <RadioIcon as={CircleIcon}/>
                           </RadioIndicator>
-                          <RadioLabel style={{fontSize:14}}>កូនក្រោយសម្រាលរួច</RadioLabel>
+                          <RadioLabel style={{fontSize:14,fontFamily:'BattambangRegular'}}>កូនក្រោយសម្រាលរួច</RadioLabel>
                         </Radio>
                       </RadioGroup>
                     </View>
@@ -201,19 +221,18 @@ export function NewCustomer() {
                 {/* date picking */}
                 
                 <View style={{paddingHorizontal:20,marginTop:20}}>
-                    <Text>រដូវចុងក្រោយរបស់ម្ដាយ </Text>
+                    <Text style={{fontFamily:'BattambangRegular'}}>រដូវចុងក្រោយរបស់ម្ដាយ </Text>
                     <Input variant="outline" size="md" isDisabled={false} isInvalid={false} isReadOnly={false} marginTop={6}>
                       <InputField
-                          placeholder='ជ្រើសរើសរដូវចុងក្រោយរបស់ម្ដាយ' style={{fontSize:14}}
+                          placeholder='ជ្រើសរើសរដូវចុងក្រោយរបស់ម្ដាយ' style={{fontSize:14,fontFamily:'BattambangRegular'}}
                       />
                       <Fontisto name="date" size={20} color="black" style={{padding:5,marginRight:5,alignSelf:'center'}} />
                     </Input>
 
-                </View>
-
+                </View>             
                 {/* btn submit */}
-                  <Button size="md" variant="solid" backgroundColor='#5F3C8D' isDisabled={false} isFocusVisible={false} marginTop={30} width={80} alignSelf='flex-end' marginRight={20} >
-                    <ButtonText>បញ្ជូន </ButtonText>
+                  <Button onPress={()=>router.push("/VerifyScreen")} size="md" variant="solid" backgroundColor='#5F3C8D' isDisabled={false} isFocusVisible={false} marginTop={30} width={80} alignSelf='flex-end' marginRight={20} >
+                    <ButtonText style={{fontFamily:'BattambangRegular'}}>បញ្ជូន </ButtonText>
                   </Button>
               </View>
       
@@ -228,4 +247,4 @@ export function NewCustomer() {
   }
 
 
-export default NewCustomer
+export default NewCustomer;
